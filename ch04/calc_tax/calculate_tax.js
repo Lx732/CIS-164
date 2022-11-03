@@ -1,4 +1,4 @@
-"use strict";
+
 var $ = function (id) {
 	return document.getElementById(id);
   };
@@ -26,22 +26,21 @@ var $ = function (id) {
 	  valOfIncomeInInteger = parseInt(valueOfIncome);
   
 	  // use if-else statements to calculate tax amount
-	  if (valOfIncomeInInteger > 0 && valOfIncomeInInteger <= 9275) {
-		valueOfTaxAmt = valOfIncomeInInteger * 0.1;
-	  } else if (valOfIncomeInInteger > 9275 && valOfIncomeInInteger <= 37650) {
-		valueOfTaxAmt = (valOfIncomeInInteger - 9275) * 0.15 + 927.5;
-	  } else if (valOfIncomeInInteger > 37650 && valOfIncomeInInteger <= 91150) {
-		valueOfTaxAmt = (valOfIncomeInInteger - 37650) * 0.25 + 5183.75;
-	  } else if (valOfIncomeInInteger > 91150 && valOfIncomeInInteger <= 190150) {
-		valueOfTaxAmt = (valOfIncomeInInteger - 91150) * 0.28 + 18558.75;
-	  } else if (valOfIncomeInInteger > 190150 && valOfIncomeInInteger <= 413350) {
-		valueOfTaxAmt = (valOfIncomeInInteger - 190150) * 0.33 + 46278.75;
-	  } else if (valOfIncomeInInteger > 413350 && valOfIncomeInInteger <= 415050) {
-		valueOfTaxAmt = (valOfIncomeInInteger - 413350) * 0.35 + 119934.75;
-	  } else if (valOfIncomeInInteger > 415050) {
-		valueOfTaxAmt = (valOfIncomeInInteger - 415050) * 0.396 + 120529.75;
+	  if (valOfIncomeInInteger > 0 && valOfIncomeInInteger <= 9875) {
+		valueOfTaxAmt = valOfIncomeInInteger * 0.10;
+	  } else if (valOfIncomeInInteger > 9875 && valOfIncomeInInteger <= 40125) {
+		valueOfTaxAmt = (valOfIncomeInInteger - 9875) * 0.12 + 987.50;
+	  } else if (valOfIncomeInInteger > 40125 && valOfIncomeInInteger <= 85525) {
+		valueOfTaxAmt = (valOfIncomeInInteger - 40125) * 0.22 + 4617.50;
+	  } else if (valOfIncomeInInteger > 85525 && valOfIncomeInInteger <= 163300) {
+		valueOfTaxAmt = (valOfIncomeInInteger - 85525) * 0.24 + 14605.50;
+	  } else if (valOfIncomeInInteger > 163300 && valOfIncomeInInteger <= 207350) {
+		valueOfTaxAmt = (valOfIncomeInInteger - 163300) * 0.32 + 33271.50;
+	  } else if (valOfIncomeInInteger > 207350 && valOfIncomeInInteger <= 518400) {
+		valueOfTaxAmt = (valOfIncomeInInteger - 207350) * 0.35 + 47367.50;
+	  } else if (valOfIncomeInInteger > 518400) {
+		valueOfTaxAmt = (valOfIncomeInInteger - 518400) * 0.37 + 156235.00;
 	  }
-  
 	  // return tax fixed to 2 decimals
 	  return valueOfTaxAmt.toFixed(2);
 	}
